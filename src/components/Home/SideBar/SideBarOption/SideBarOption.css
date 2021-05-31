@@ -1,0 +1,37 @@
+.optionDivNotSelected {
+  display: flex;
+  align-items: center;
+  padding: 0px 15px;
+}
+.optionDivSelected {
+  display: flex;
+  align-items: center;
+  padding: 0px 15px;
+  background-color: #dddddd;
+}
+.LinkStyle {
+  text-decoration: none;
+}
+.optionDivNotSelected:hover {
+  background-color: #f0f0f0;
+}
+.optionDiv__iconNotSelected {
+  padding: 2px 10px;
+  color: #636363;
+}
+.optionDiv__iconSelected {
+  padding: 2px 10px;
+  color: #ff4444;
+}
+.optionDiv__titleSelected {
+  padding: 2px 13px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #474747;
+}
+.optionDiv__titleNotSelected {
+  padding: 2px 13px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #636363;
+}

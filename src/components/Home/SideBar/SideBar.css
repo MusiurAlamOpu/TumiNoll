@@ -1,0 +1,38 @@
+.horizontalLineBreak {
+  border: 0.01px solid rgb(233, 233, 233);
+}
+.sideBarDiv {
+  overflow-y: scroll;
+  height: 90vh;
+  position: fixed;
+  top: 0;
+  margin-top: 60px;
+  max-width: 15%;
+}
+.sideBarDiv__linksDiv {
+  display: flex;
+  flex-wrap: wrap;
+}
+.links {
+  text-decoration: none;
+  font-size: 13px;
+  color: grey;
+  margin: 2px;
+  font-weight: 600;
+}
+.linkDiv {
+  height: 20px;
+  margin: 3px;
+}
+.googleLLC {
+  font-size: 13px;
+  color: grey;
+  margin: 2px;
+  font-weight: 600;
+  padding-top: 20px;
+}
+.linksSuperDiv {
+  padding-left: 15px;
+  text-align: left;
+  background-color: #f0f0f0af;
+}

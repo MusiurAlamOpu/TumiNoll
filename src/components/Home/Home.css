@@ -1,0 +1,18 @@
+.home__appSection {
+  display: flex;
+  align-items: top;
+}
+.home__appSection__sideBar {
+  flex: 0.15;
+}
+.home__appSection__MiniSideBar {
+  flex: 0.05;
+}
+.home__appSection__videoSection {
+  flex: 0.85;
+  background-color: #fafafa;
+}
+.home__appSection__videoSectionBig {
+  flex: 0.95;
+  background-color: #fafafa;
+}
