@@ -1,0 +1,29 @@
+/* #mainSectionDiv::-webkit-scrollbar {
+  width: 8px;
+}
+
+#mainSectionDiv::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+#mainSectionDiv::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+} */
+/* style={{
+          display: "flex",
+          flexWrap: "wrap",
+          // justifyContent: "space-between",
+          alignItems: "top",
+          paddingTop: "35px",
+          height: "86.6vh",
+          overflowY: "scroll",
+        }} */
+#mainSectionDiv {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: top;
+  padding-top: 35px;
+  height: 86.6vh;
+  overflow-y: scroll;
+}

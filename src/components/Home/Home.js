@@ -5,6 +5,7 @@ import VideoSection from "./VideoSection/VideoSection";
 import "./Home.css";
 import { MenuContext } from "../../App";
 import MiniSideBar from "./MiniSideBar/MiniSideBar";
+import HorizontalBar from "./HorizontalBar/HorizontalBar";
 
 const Home = () => {
   const [menuClicked, setmenuClicked] = useContext(MenuContext);

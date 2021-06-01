@@ -93,18 +93,14 @@ const SideBar = () => {
       OptionIcon: Feedback,
       optionTitle: "Feedback",
     },
-    {
-      OptionIcon: EmojiEvents,
-      optionTitle: "Subscriptions",
-    },
   ];
   return (
-    <div className="sideBarDiv">
+    <div id="sideBarDiv" className="sideBarDiv">
       <SideBarOptions optionsProperty={optionsProperty1}></SideBarOptions>
       <hr className="horizontalLineBreak" />
       <SideBarOptions optionsProperty={optionsProperty2}></SideBarOptions>
       <hr className="horizontalLineBreak" />
-      <p style={{ color: "grey", fontWeight: "600" }}>MORE FROM YOUTUBE</p>
+      <p style={{ color: "grey", fontWeight: "600" }}>MORE FROM TUMINOLL</p>
       <SideBarOptions optionsProperty={optionsProperty3}></SideBarOptions>
       <hr className="horizontalLineBreak" />
       <SideBarOptions optionsProperty={optionsProperty4}></SideBarOptions>
@@ -165,7 +161,7 @@ const SideBar = () => {
           </div>
           <div className="linkDiv">
             <Link className="links" to="/">
-              How YouTube works
+              How TumiNoll works
             </Link>
           </div>
           <div className="linkDiv">
@@ -174,7 +170,7 @@ const SideBar = () => {
             </Link>
           </div>
         </div>
-        <p className="googleLLC">© {new Date().getFullYear()} Google LLC</p>
+        <p className="googleLLC">© {new Date().getFullYear()} OPUTECH LLC</p>
       </div>
     </div>
   );

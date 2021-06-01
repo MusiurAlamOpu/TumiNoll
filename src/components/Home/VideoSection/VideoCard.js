@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { MenuContext } from "../../../App";
 import image from "../../../Images/cat.jpg";
 import { MoreVert } from "@material-ui/icons";
+// import "./VideoCard.css";
+
 const VideoCard = (props) => {
   const [menuClicked, setmenuClicked] = useContext(MenuContext);
   const { id, title, channel, video_views } = props.videoData;
@@ -26,6 +28,7 @@ const VideoCard = (props) => {
   const VideoLink = `/video/${id}`;
   return (
     <Link
+      id="CardAsLink"
       style={{ color: "black", textDecoration: "none", margin: "8px" }}
       to={VideoLink}
     >

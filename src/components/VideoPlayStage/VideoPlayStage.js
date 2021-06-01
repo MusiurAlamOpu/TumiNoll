@@ -2,27 +2,38 @@ import React from "react";
 import Header from "../Home/Header/Header";
 import Image from "../../Images/cat.jpg";
 import FakeVideoData from "../Home/VideoSection/FakeVideo.json";
-import VideoCard from "../Home/VideoSection/VideoCard";
 import {
   ThumbUp,
   ThumbDown,
-  Report,
+  // Report,
   Share,
   Notifications,
   Save,
   MoreHoriz,
-  SortByAlpha,
   Sort,
 } from "@material-ui/icons";
 import { Button } from "@material-ui/core";
 import SuggestenVideos from "./SuggestenVideos";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  IsLoggedIn,
+  IsSubscribed,
+  IsNotSubscribed,
+} from "../../actions/index.js";
+// import SideBar from "../Home/SideBar/SideBar";
 
 const VideoPlayStage = () => {
+  const subscribed = useSelector((state) => state.IsSubscribed);
+  const loggedIn = useSelector((state) => state.IsLoggedIn);
+  const dispatch = useDispatch();
+
+  console.log(subscribed, loggedIn);
   const { title, channel_subscription, video_views, channel } =
     FakeVideoData[0];
   return (
     <div>
       <Header />
+      {/* <SideBar /> */}
       <div
         style={{
           display: "flex",
@@ -173,20 +184,39 @@ const VideoPlayStage = () => {
             </div>
 
             <div style={{ display: "flex", alignItems: "center" }}>
-              <Button
-                style={{
-                  // backgroundColor: "#CC0000",
-                  backgroundColor: "#23A8F2",
-                  color: "white",
-                  width: "130px",
-                  height: "40px",
-                }}
-              >
-                Subscribe
-              </Button>
-              {/* <Notifications
-                style={{ paddingLeft: "20px", color: "grey" }}
-              ></Notifications> */}
+              {!subscribed && (
+                <Button
+                  onClick={() => dispatch(IsSubscribed())}
+                  style={{
+                    // backgroundColor: "#CC0000",
+                    backgroundColor: "#23A8F2",
+                    color: "white",
+                    width: "130px",
+                    height: "40px",
+                  }}
+                >
+                  Subscribe
+                </Button>
+              )}
+              {subscribed && (
+                <>
+                  <Button
+                    onClick={() => dispatch(IsNotSubscribed())}
+                    style={{
+                      // backgroundColor: "#CC0000",
+                      backgroundColor: "lightgrey",
+                      color: "#606060",
+                      width: "130px",
+                      height: "40px",
+                    }}
+                  >
+                    Subscribe
+                  </Button>
+                  <Notifications
+                    style={{ paddingLeft: "20px", color: "grey" }}
+                  ></Notifications>
+                </>
+              )}
             </div>
           </div>
           <div
@@ -221,7 +251,12 @@ const VideoPlayStage = () => {
         </div>
         <div style={{ flex: "0.35" }}>
           {FakeVideoData.map((videoData) => {
-            return <SuggestenVideos videoData={videoData}></SuggestenVideos>;
+            return (
+              <SuggestenVideos
+                key={videoData.id}
+                videoData={videoData}
+              ></SuggestenVideos>
+            );
           })}
         </div>
       </div>

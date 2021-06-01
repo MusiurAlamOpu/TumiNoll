@@ -3,6 +3,7 @@ import React, { createContext, useState } from "react";
 import "./App.css";
 import Home from "./components/Home/Home";
 import VideoPlayStage from "./components/VideoPlayStage/VideoPlayStage";
+// import Header from "./components/Home/Header/Header";
 export const MenuContext = createContext(false);
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <div className="app">
       <MenuContext.Provider value={[menuClicked, setmenuClicked]}>
         <Router>
+          {/* <Header /> */}
           <Switch>
             <Route exact path="/">
               <Home />

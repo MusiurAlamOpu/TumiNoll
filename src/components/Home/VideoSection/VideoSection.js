@@ -1,22 +1,21 @@
 import React from "react";
+import HorizontalBar from "../HorizontalBar/HorizontalBar";
 import FakeVideoData from "./FakeVideo.json";
 import VideoCard from "./VideoCard";
+import "./VideoSection.css";
 
 const VideoSection = () => {
-  // console.log(FakeVideoData);
   return (
-    <div
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        // justifyContent: "space-between",
-        alignItems: "top",
-      }}
-    >
-      {FakeVideoData.map((videoData) => {
-        return <VideoCard videoData={videoData}></VideoCard>;
-      })}
-    </div>
+    <>
+      <div style={{ position: "fixed" }}>
+        <HorizontalBar />
+      </div>
+      <div id="mainSectionDiv">
+        {FakeVideoData.map((videoData) => {
+          return <VideoCard videoData={videoData}></VideoCard>;
+        })}
+      </div>
+    </>
   );
 };
 
